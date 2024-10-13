@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\Buet Game Jam\\Heroes-Never-Die\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9CFACA26-C91D-212A-E977-0AB0FAE3E329}|Assembly-CSharp.csproj|c:\\projects\\buet game jam\\heroes-never-die\\assets\\environment\\cainos\\pixel art platformer - village props\\changelog.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9CFACA26-C91D-212A-E977-0AB0FAE3E329}|Assembly-CSharp.csproj|solutionrelative:assets\\environment\\cainos\\pixel art platformer - village props\\changelog.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Changelog.txt",
+              "DocumentMoniker": "C:\\Projects\\Buet Game Jam\\Heroes-Never-Die\\Assets\\Environment\\Cainos\\Pixel Art Platformer - Village Props\\Changelog.txt",
+              "RelativeDocumentMoniker": "Assets\\Environment\\Cainos\\Pixel Art Platformer - Village Props\\Changelog.txt",
+              "ToolTip": "C:\\Projects\\Buet Game Jam\\Heroes-Never-Die\\Assets\\Environment\\Cainos\\Pixel Art Platformer - Village Props\\Changelog.txt",
+              "RelativeToolTip": "Assets\\Environment\\Cainos\\Pixel Art Platformer - Village Props\\Changelog.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-10-13T19:39:58.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
