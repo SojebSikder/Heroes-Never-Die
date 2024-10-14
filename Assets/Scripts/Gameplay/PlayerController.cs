@@ -19,11 +19,15 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
 
+    private bool isWallSliding = false;
     private bool grounded = false;
+    private bool rolling = false;
     private int facingDirection = 1;
     private float currentAttack;
     private float timeSinceAttack = 0.0f;
     private float delayToIdle = 0.0f;
+    private float rollDuration = 0.0f;
+    private float rollCurrentTime;
 
 
     // Start is called before the first frame update
@@ -33,6 +37,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         groundSensor = transform.Find("GroundSensor").GetComponent<PlayerSensor>();
         wallSensorR1 = transform.Find("WallSensor_R1").GetComponent<PlayerSensor>();
+        wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<PlayerSensor>();
         wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<PlayerSensor>();
         wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<PlayerSensor>();
     }
@@ -42,6 +47,18 @@ public class PlayerController : MonoBehaviour
     {
         // Increase timer that controls attack combo
         timeSinceAttack += Time.deltaTime;
+
+        // Increase timer that checks roll duration
+        if (rolling)
+        {
+            rollCurrentTime += Time.deltaTime;
+        }
+
+        // Disable rolling if timer extends duration
+        if (rollCurrentTime > rollDuration)
+        {
+            rolling = false;
+        }
 
         // Check if character just landed on the ground
         if (!grounded && groundSensor.State())
@@ -73,13 +90,31 @@ public class PlayerController : MonoBehaviour
         }
 
         // Move
-        rb.velocity = new Vector2(inputX * speed, rb.velocity.y);
+        if (!rolling)
+        {
+            rb.velocity = new Vector2(inputX * speed, rb.velocity.y);
+        }
 
         // Set AirSpeed in animator
         animator.SetFloat("AirSpeedY", rb.velocity.y);
 
+        // Wall Slide
+        isWallSliding = (wallSensorR1.State() && wallSensorR2.State()) || (wallSensorL1.State() && wallSensorL2.State());
+        animator.SetBool("WallSlide", isWallSliding);
+
+        // Death
+        if (Input.GetKeyDown("e") && !rolling)
+        {
+            animator.SetBool("noBlood", noBlood);
+            animator.SetTrigger("Death");
+        }
+        // Hurt
+        else if (Input.GetKeyDown("q") && !rolling)
+        {
+            animator.SetTrigger("Hurt");
+        }
         // Attack
-        if (Input.GetMouseButtonDown(0) && timeSinceAttack > 0.25f)
+        else if (Input.GetMouseButtonDown(0) && timeSinceAttack > 0.25f && !rolling)
         {
             currentAttack++;
 
@@ -102,7 +137,7 @@ public class PlayerController : MonoBehaviour
             timeSinceAttack = 0.0f;
         }
         // Block
-        else if (Input.GetMouseButtonDown(1))
+        else if (Input.GetMouseButtonDown(1) && !rolling)
         {
             animator.SetTrigger("Block");
             animator.SetBool("IdleBlock", true);
@@ -112,8 +147,15 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IdleBlock", false);
 
         }
+        // Roll
+        else if (Input.GetKeyDown("left shift") && !rolling && !isWallSliding)
+        {
+            rolling = true;
+            animator.SetTrigger("Roll");
+            rb.velocity = new Vector2(facingDirection * rollForce, rb.velocity.y);
+        }
         // Jump
-        else if (Input.GetKeyDown("space") && grounded)
+        else if (Input.GetKeyDown("space") && grounded && !rolling)
         {
             animator.SetTrigger("Jump");
             grounded = false;
