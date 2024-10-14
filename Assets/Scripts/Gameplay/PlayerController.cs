@@ -30,6 +30,13 @@ public class PlayerController : MonoBehaviour
     private float rollDuration = 0.0f;
     private float rollCurrentTime;
 
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemyLaters;
+    public int attackDamage = 20;
+    // public float attackRate = 2f;
+    // float nextAttackTime = 0f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -83,11 +90,15 @@ public class PlayerController : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().flipX = false;
             facingDirection = 1;
+            // handle attack direction
+            attackPoint.localPosition = new Vector3(0.5f, attackPoint.localPosition.y, 0);
         }
         else if (inputX < 0)
         {
             GetComponent<SpriteRenderer>().flipX = true;
             facingDirection = -1;
+            // handle attack direction
+            attackPoint.localPosition = new Vector3(-0.5f, attackPoint.localPosition.y, 0);
         }
 
         // Move
@@ -133,6 +144,15 @@ public class PlayerController : MonoBehaviour
 
             // Call on of three animations "Attack1", "Attack2", "Attack3"
             animator.SetTrigger("Attack" + currentAttack);
+
+            // Detect enemies in range of attack
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLaters);
+
+            // Damage enemies
+            foreach (Collider2D enemy in hitEnemies)
+            {
+                enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            }
 
             // Reset timer
             timeSinceAttack = 0.0f;
@@ -184,6 +204,13 @@ public class PlayerController : MonoBehaviour
 
         }
 
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
     // Animation events
