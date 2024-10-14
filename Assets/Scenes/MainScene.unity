@@ -605,6 +605,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4771716317776647217, guid: 3e5570915dbdf7d43ba2546aa4075c5f, type: 3}
+      propertyPath: slideDust
+      value: 
+      objectReference: {fileID: 1675078596160920227, guid: 9cfef12ff30e5804abf00b41b0e91f09, type: 3}
     - target: {fileID: 4999982839284388578, guid: 3e5570915dbdf7d43ba2546aa4075c5f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.24846411

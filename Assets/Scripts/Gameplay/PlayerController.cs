@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float jumpForce = 7.5f;
     [SerializeField] float rollForce = 6.0f;
     [SerializeField] bool noBlood = false;
+    [SerializeField] GameObject slideDust;
 
 
     private PlayerSensor groundSensor;
@@ -183,5 +184,29 @@ public class PlayerController : MonoBehaviour
 
         }
 
+    }
+
+    // Animation events
+    // Called in slide animation
+    void AE_SlideDust()
+    {
+        Vector3 spawnPosition;
+
+        if (facingDirection == 1)
+        {
+            spawnPosition = wallSensorR2.transform.position;
+        }
+        else
+        {
+            spawnPosition = wallSensorL2.transform.position;
+        }
+
+        if (slideDust != null)
+        {
+            // Set correct arrow spawn position
+            GameObject dust = Instantiate(slideDust, spawnPosition, gameObject.transform.localRotation);
+            // Turn arrow in correct direction
+            dust.transform.localScale = new Vector3(facingDirection, 1, 1);
+        }
     }
 }
