@@ -36,6 +36,16 @@ public class PlayerController : MonoBehaviour
     public int attackDamage = 20;
     // public float attackRate = 2f;
     // float nextAttackTime = 0f;
+<<<<<<< Updated upstream
+=======
+    public int maxHealth = 100;
+    public HealthBar healthBar;
+    int currentHealth;
+
+
+    public TextMeshProUGUI healthText;
+
+>>>>>>> Stashed changes
 
 
     // Start is called before the first frame update
@@ -48,6 +58,13 @@ public class PlayerController : MonoBehaviour
         wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<PlayerSensor>();
         wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<PlayerSensor>();
         wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<PlayerSensor>();
+<<<<<<< Updated upstream
+=======
+
+        currentHealth = maxHealth;
+        healthBar.SetHealth(maxHealth);
+        healthText.text = "Hero: " + currentHealth.ToString();
+>>>>>>> Stashed changes
     }
 
     // Update is called once per frame
@@ -206,6 +223,62 @@ public class PlayerController : MonoBehaviour
 
     }
 
+<<<<<<< Updated upstream
+=======
+    void Respawn()
+    {
+        gameManager.DoSlowmotion();
+
+        currentHealth = maxHealth;
+        healthText.text = "Hero: " + currentHealth.ToString();
+        animator.SetTrigger("Respawn");
+    }
+
+    public void TakeDamage(int damage)
+    {
+        healthBar.SetHealth(currentHealth);
+        if (currentHealth <= 0)
+        {
+            return;
+        }
+
+        currentHealth -= damage;
+        healthText.text = "Hero: " + currentHealth.ToString();
+
+        animator.SetTrigger("Hurt");
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+        else if (currentHealth <= 30)
+        {
+            Respawn();
+        }
+
+    }
+
+    void Die()
+    {
+        animator.SetTrigger("Death");
+
+        // GetComponent<Collider2D>().enabled = false;
+        enabled = false;
+        // destroy the enemy after 1 second
+        Destroy(gameObject, 10f);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // if (collision.CompareTag("AttackSlash"))
+        // {
+        //     Debug.Log("Player hit by enemy");
+        //     TakeDamage(attackDamage);
+        // }
+    }
+
+    // Draw attack range in editor
+>>>>>>> Stashed changes
     void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
