@@ -44,11 +44,11 @@ public class VillainController : MonoBehaviour
 			if (Time.time - walkStartTime > 2.0f)
 			{
 				speed = 0.03f;
-				animator.SetTrigger("run");
+				animator.SetTrigger("Run");
 			}
 			else
 			{
-				animator.SetTrigger("walk");
+				animator.SetTrigger("Walk");
 			}
 			if (isEvade)
 			{
@@ -76,10 +76,10 @@ public class VillainController : MonoBehaviour
 		if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
 		{
 			walkStartTime = 0;
-			animator.ResetTrigger("idle_1");
-			animator.ResetTrigger("walk");
-			animator.ResetTrigger("run");
-			animator.SetTrigger("idle_1");
+			animator.ResetTrigger("Idle_1");
+			animator.ResetTrigger("Walk");
+			animator.ResetTrigger("Run");
+			animator.SetTrigger("Idle_1");
 		}
 
 		if (Input.anyKeyDown)
@@ -90,23 +90,23 @@ public class VillainController : MonoBehaviour
 				{
 					if (keyCode == KeyCode.H)
 					{
-						animator.SetTrigger("skill_1");
+						animator.SetTrigger("Attack_1");
 					}
 					else if (keyCode == KeyCode.J)
 					{
-						animator.SetTrigger("skill_2");
+						animator.SetTrigger("Attack_2");
 					}
 					else if (keyCode == KeyCode.K)
 					{
-						animator.SetTrigger("skill_3");
+						animator.SetTrigger("Attack_3");
 					}
 					else if (keyCode == KeyCode.L)
 					{
-						animator.SetTrigger("idle_2");
+						animator.SetTrigger("Idle_2");
 					}
 					else if (keyCode == KeyCode.Space)
 					{
-						animator.SetTrigger("evade_1");
+						animator.SetTrigger("Evade_1");
 						StartCoroutine(Evade());
 
 					}

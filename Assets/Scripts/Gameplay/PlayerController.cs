@@ -1,10 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameManager gameManager;
+
     [SerializeField] float speed = 4.0f;
     [SerializeField] float jumpForce = 7.5f;
     [SerializeField] float rollForce = 6.0f;
@@ -36,6 +37,12 @@ public class PlayerController : MonoBehaviour
     public int attackDamage = 20;
     // public float attackRate = 2f;
     // float nextAttackTime = 0f;
+    public int maxHealth = 100;
+    int currentHealth;
+
+
+    public TextMeshProUGUI healthText;
+
 
 
     // Start is called before the first frame update
@@ -48,6 +55,9 @@ public class PlayerController : MonoBehaviour
         wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<PlayerSensor>();
         wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<PlayerSensor>();
         wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<PlayerSensor>();
+
+        currentHealth = maxHealth;
+        healthText.text = "Hero: " + currentHealth.ToString();
     }
 
     // Update is called once per frame
@@ -206,6 +216,58 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    void Respawn()
+    {
+        gameManager.DoSlowmotion();
+
+        currentHealth = maxHealth;
+        healthText.text = "Hero: " + currentHealth.ToString();
+        animator.SetTrigger("Respawn");
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (currentHealth <= 0)
+        {
+            return;
+        }
+
+        currentHealth -= damage;
+        healthText.text = "Hero: " + currentHealth.ToString();
+
+        animator.SetTrigger("Hurt");
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+        else if (currentHealth <= 30)
+        {
+            Respawn();
+        }
+
+    }
+
+    void Die()
+    {
+        animator.SetTrigger("Death");
+
+        // GetComponent<Collider2D>().enabled = false;
+        enabled = false;
+        // destroy the enemy after 1 second
+        Destroy(gameObject, 10f);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // if (collision.CompareTag("AttackSlash"))
+        // {
+        //     Debug.Log("Player hit by enemy");
+        //     TakeDamage(attackDamage);
+        // }
+    }
+
+    // Draw attack range in editor
     void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
