@@ -14,6 +14,9 @@ public class Bird : MonoBehaviour
     private bool isFlipped = true;
 
 
+    public GameObject ray;
+
+
     // public float smoothSpeed = 0.125f;
     // public Vector3 offset;
 
@@ -29,10 +32,28 @@ public class Bird : MonoBehaviour
         LookAtPlayer();
         Move();
 
+        if (player.GetComponent<PlayerController>().currentHealth <= 40)
+        {
+            EnableRay();
+        }
         // if (Vector2.Distance(transform.position, player.position) < attackRange)
         // {
         //     Attack();
         // }
+    }
+
+    // Enable ray for 5 seconds
+    public void EnableRay()
+    {
+        ray.SetActive(true);
+        // disable ray after 8 seconds
+        StartCoroutine(DisableRay());
+    }
+
+    IEnumerator DisableRay()
+    {
+        yield return new WaitForSeconds(5f);
+        ray.SetActive(false);
     }
 
     void LookAtPlayer()

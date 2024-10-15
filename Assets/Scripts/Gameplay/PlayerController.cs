@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     // public float attackRate = 2f;
     // float nextAttackTime = 0f;
     public int maxHealth = 100;
-    int currentHealth;
+    public int currentHealth;
 
 
     public TextMeshProUGUI healthText;
