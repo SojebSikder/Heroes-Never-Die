@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public bool isBoss = false;
     public Transform player;
     public bool isFlipped = false;
 
@@ -61,8 +62,17 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
         healthText.text = "Villain: " + currentHealth.ToString();
 
-        // randome between 2 hit animations
-        animator.SetTrigger("Hit_" + UnityEngine.Random.Range(1, 3));
+        if (isBoss)
+        {
+            // randome between 2 hit animations for boss
+            animator.SetTrigger("Hit_" + Random.Range(1, 3));
+        }
+        else
+        {
+            // for skeleton enemy
+            animator.SetTrigger("Hit");
+        }
+
 
         if (currentHealth <= 0)
         {

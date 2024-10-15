@@ -268,11 +268,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1232b96a9716e9a4d89e8539c9691e70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBoss: 1
   player: {fileID: 1291131793}
   isFlipped: 0
   maxHealth: 100
   attackDamage: 15
-  attackOffset: {x: -1.56, y: 0.78, z: 0}
+  attackOffset: {x: -1.41, y: 1.05, z: 0}
   attackRange: 1.2
   attackMask:
     serializedVersion: 2
@@ -1656,6 +1657,10 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1196967815}
+    - target: {fileID: 463749077949303061, guid: 70fc2e87df48468409be2e98f3e23c50, type: 3}
+      propertyPath: attackDamage
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 909744086064965573, guid: 70fc2e87df48468409be2e98f3e23c50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.23
