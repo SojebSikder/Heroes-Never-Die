@@ -205,9 +205,9 @@ GameObject:
   - component: {fileID: 652802734259561997}
   - component: {fileID: 9113385664089321595}
   - component: {fileID: 4771716317776647217}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -222,7 +222,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.241, y: 2.265, z: -0.010075312}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.2870939, y: 2.2870939, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 765802978685200711}
@@ -390,16 +390,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dde234356bccbac4aa512f0fa7c8dd02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   speed: 4
   jumpForce: 7.5
   rollForce: 6
   noBlood: 0
   slideDust: {fileID: 1675078596160920227, guid: 9cfef12ff30e5804abf00b41b0e91f09, type: 3}
   attackPoint: {fileID: 4606974226299033421}
-  attackRange: 0.7
+  attackRange: 1.7
   enemyLaters:
     serializedVersion: 2
     m_Bits: 256
+  attackDamage: 5
+  maxHealth: 100
+  healthText: {fileID: 0}
 --- !u!1 &8020386836471923828
 GameObject:
   m_ObjectHideFlags: 0

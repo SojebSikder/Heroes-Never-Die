@@ -58,7 +58,7 @@ public class Bird : MonoBehaviour
     void Move()
     {
         // top of player head
-        transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x - 0.5f, player.position.y + 1.8f), speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x - 0.7f, player.position.y + 3.7f), speed * Time.deltaTime);
         // animator.SetFloat("Speed", speed);
     }
 
