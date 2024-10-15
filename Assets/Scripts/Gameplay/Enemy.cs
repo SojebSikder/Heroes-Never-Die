@@ -86,7 +86,7 @@ public class Enemy : MonoBehaviour
         // GetComponent<Collider2D>().enabled = false;
         enabled = false;
         // destroy the enemy after 1 second
-        Destroy(gameObject, 10f);
+        // Destroy(gameObject, 10f);
     }
 
 
