@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float jumpForce = 7.5f;
     [SerializeField] float rollForce = 6.0f;
     [SerializeField] bool noBlood = false;
+    [SerializeField] GameObject slideDust;
 
 
     private PlayerSensor groundSensor;
@@ -19,11 +20,22 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
 
+    private bool isWallSliding = false;
     private bool grounded = false;
+    private bool rolling = false;
     private int facingDirection = 1;
     private float currentAttack;
     private float timeSinceAttack = 0.0f;
     private float delayToIdle = 0.0f;
+    private float rollDuration = 0.0f;
+    private float rollCurrentTime;
+
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemyLaters;
+    public int attackDamage = 20;
+    // public float attackRate = 2f;
+    // float nextAttackTime = 0f;
 
 
     // Start is called before the first frame update
@@ -33,6 +45,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         groundSensor = transform.Find("GroundSensor").GetComponent<PlayerSensor>();
         wallSensorR1 = transform.Find("WallSensor_R1").GetComponent<PlayerSensor>();
+        wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<PlayerSensor>();
         wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<PlayerSensor>();
         wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<PlayerSensor>();
     }
@@ -42,6 +55,18 @@ public class PlayerController : MonoBehaviour
     {
         // Increase timer that controls attack combo
         timeSinceAttack += Time.deltaTime;
+
+        // Increase timer that checks roll duration
+        if (rolling)
+        {
+            rollCurrentTime += Time.deltaTime;
+        }
+
+        // Disable rolling if timer extends duration
+        if (rollCurrentTime > rollDuration)
+        {
+            rolling = false;
+        }
 
         // Check if character just landed on the ground
         if (!grounded && groundSensor.State())
@@ -65,21 +90,43 @@ public class PlayerController : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().flipX = false;
             facingDirection = 1;
+            // handle attack direction
+            attackPoint.localPosition = new Vector3(0.5f, attackPoint.localPosition.y, 0);
         }
         else if (inputX < 0)
         {
             GetComponent<SpriteRenderer>().flipX = true;
             facingDirection = -1;
+            // handle attack direction
+            attackPoint.localPosition = new Vector3(-0.5f, attackPoint.localPosition.y, 0);
         }
 
         // Move
-        rb.velocity = new Vector2(inputX * speed, rb.velocity.y);
+        if (!rolling)
+        {
+            rb.velocity = new Vector2(inputX * speed, rb.velocity.y);
+        }
 
         // Set AirSpeed in animator
         animator.SetFloat("AirSpeedY", rb.velocity.y);
 
+        // Wall Slide
+        isWallSliding = (wallSensorR1.State() && wallSensorR2.State()) || (wallSensorL1.State() && wallSensorL2.State());
+        animator.SetBool("WallSlide", isWallSliding);
+
+        // Death
+        if (Input.GetKeyDown("e") && !rolling)
+        {
+            animator.SetBool("noBlood", noBlood);
+            animator.SetTrigger("Death");
+        }
+        // Hurt
+        else if (Input.GetKeyDown("q") && !rolling)
+        {
+            animator.SetTrigger("Hurt");
+        }
         // Attack
-        if (Input.GetMouseButtonDown(0) && timeSinceAttack > 0.25f)
+        else if (Input.GetMouseButtonDown(0) && timeSinceAttack > 0.25f && !rolling)
         {
             currentAttack++;
 
@@ -98,11 +145,20 @@ public class PlayerController : MonoBehaviour
             // Call on of three animations "Attack1", "Attack2", "Attack3"
             animator.SetTrigger("Attack" + currentAttack);
 
+            // Detect enemies in range of attack
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLaters);
+
+            // Damage enemies
+            foreach (Collider2D enemy in hitEnemies)
+            {
+                enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            }
+
             // Reset timer
             timeSinceAttack = 0.0f;
         }
         // Block
-        else if (Input.GetMouseButtonDown(1))
+        else if (Input.GetMouseButtonDown(1) && !rolling)
         {
             animator.SetTrigger("Block");
             animator.SetBool("IdleBlock", true);
@@ -112,8 +168,15 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IdleBlock", false);
 
         }
+        // Roll
+        else if (Input.GetKeyDown("left shift") && !rolling && !isWallSliding)
+        {
+            rolling = true;
+            animator.SetTrigger("Roll");
+            rb.velocity = new Vector2(facingDirection * rollForce, rb.velocity.y);
+        }
         // Jump
-        else if (Input.GetKeyDown("space") && grounded)
+        else if (Input.GetKeyDown("space") && grounded && !rolling)
         {
             animator.SetTrigger("Jump");
             grounded = false;
@@ -141,5 +204,36 @@ public class PlayerController : MonoBehaviour
 
         }
 
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    // Animation events
+    // Called in slide animation
+    void AE_SlideDust()
+    {
+        Vector3 spawnPosition;
+
+        if (facingDirection == 1)
+        {
+            spawnPosition = wallSensorR2.transform.position;
+        }
+        else
+        {
+            spawnPosition = wallSensorL2.transform.position;
+        }
+
+        if (slideDust != null)
+        {
+            // Set correct arrow spawn position
+            GameObject dust = Instantiate(slideDust, spawnPosition, gameObject.transform.localRotation);
+            // Turn arrow in correct direction
+            dust.transform.localScale = new Vector3(facingDirection, 1, 1);
+        }
     }
 }
