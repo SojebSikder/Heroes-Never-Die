@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Projects\\Buet Game Jam\\Heroes-Never-Die\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9CFACA26-C91D-212A-E977-0AB0FAE3E329}|Assembly-CSharp.csproj|c:\\projects\\buet game jam\\heroes-never-die\\assets\\environment\\cainos\\pixel art platformer - village props\\changelog.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{9CFACA26-C91D-212A-E977-0AB0FAE3E329}|Assembly-CSharp.csproj|solutionrelative:assets\\environment\\cainos\\pixel art platformer - village props\\changelog.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{9CFACA26-C91D-212A-E977-0AB0FAE3E329}|Assembly-CSharp.csproj|c:\\projects\\buet game jam\\heroes-never-die\\assets\\black knight\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9CFACA26-C91D-212A-E977-0AB0FAE3E329}|Assembly-CSharp.csproj|solutionrelative:assets\\black knight\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CFACA26-C91D-212A-E977-0AB0FAE3E329}|Assembly-CSharp.csproj|c:\\projects\\buet game jam\\heroes-never-die\\assets\\scripts\\gameplay\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CFACA26-C91D-212A-E977-0AB0FAE3E329}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,19 +23,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Changelog.txt",
-              "DocumentMoniker": "C:\\Projects\\Buet Game Jam\\Heroes-Never-Die\\Assets\\Environment\\Cainos\\Pixel Art Platformer - Village Props\\Changelog.txt",
-              "RelativeDocumentMoniker": "Assets\\Environment\\Cainos\\Pixel Art Platformer - Village Props\\Changelog.txt",
-              "ToolTip": "C:\\Projects\\Buet Game Jam\\Heroes-Never-Die\\Assets\\Environment\\Cainos\\Pixel Art Platformer - Village Props\\Changelog.txt",
-              "RelativeToolTip": "Assets\\Environment\\Cainos\\Pixel Art Platformer - Village Props\\Changelog.txt",
+              "Title": "ReadMe.txt",
+              "DocumentMoniker": "C:\\Projects\\Buet Game Jam\\Heroes-Never-Die\\Assets\\Black Knight\\ReadMe.txt",
+              "RelativeDocumentMoniker": "Assets\\Black Knight\\ReadMe.txt",
+              "ToolTip": "C:\\Projects\\Buet Game Jam\\Heroes-Never-Die\\Assets\\Black Knight\\ReadMe.txt",
+              "RelativeToolTip": "Assets\\Black Knight\\ReadMe.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-10-13T19:39:58.863Z",
+              "WhenOpened": "2024-10-15T20:03:18.328Z",
               "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\Projects\\Buet Game Jam\\Heroes-Never-Die\\Assets\\Scripts\\Gameplay\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\PlayerController.cs",
+              "ToolTip": "C:\\Projects\\Buet Game Jam\\Heroes-Never-Die\\Assets\\Scripts\\Gameplay\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\PlayerController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowDwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T08:26:19.132Z",
+              "EditorCaption": ""
             }
           ]
         }
