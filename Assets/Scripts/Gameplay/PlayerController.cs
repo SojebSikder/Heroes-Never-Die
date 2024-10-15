@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameManager gameManager;
+
     [SerializeField] float speed = 4.0f;
     [SerializeField] float jumpForce = 7.5f;
     [SerializeField] float rollForce = 6.0f;
@@ -214,6 +216,15 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    void Respawn()
+    {
+        gameManager.DoSlowmotion();
+
+        currentHealth = maxHealth;
+        healthText.text = "Hero: " + currentHealth.ToString();
+        animator.SetTrigger("Respawn");
+    }
+
     public void TakeDamage(int damage)
     {
         if (currentHealth <= 0)
@@ -230,6 +241,11 @@ public class PlayerController : MonoBehaviour
         {
             Die();
         }
+        else if (currentHealth <= 30)
+        {
+            Respawn();
+        }
+
     }
 
     void Die()
