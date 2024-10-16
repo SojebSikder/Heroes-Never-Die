@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameManager gameManager;
+    // public GameManager gameManager;
 
     [SerializeField] float speed = 4.0f;
     [SerializeField] float jumpForce = 7.5f;
@@ -58,9 +58,17 @@ public class PlayerController : MonoBehaviour
         wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<PlayerSensor>();
         wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<PlayerSensor>();
 
-        currentHealth = maxHealth;
+        // if (GameManager.Instance != null)
+        // {
+        //     currentHealth = GameManager.Instance.currentHealth;
+        // }
+        // else
+        // {
+        // }
         // healthText.text = "Hero: " + currentHealth.ToString();
+        currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        // healthBar.SetHealth(currentHealth);
     }
 
     // Update is called once per frame
@@ -221,10 +229,12 @@ public class PlayerController : MonoBehaviour
 
     void Respawn()
     {
-        gameManager.DoSlowmotion();
+        // gameManager.DoSlowmotion();
+        GameManager.Instance.DoSlowmotion();
 
         currentHealth = maxHealth;
         // healthText.text = "Hero: " + currentHealth.ToString();
+        GameManager.Instance.currentHealth = currentHealth;
         healthBar.SetHealth(currentHealth);
         animator.SetTrigger("Respawn");
     }
@@ -238,6 +248,7 @@ public class PlayerController : MonoBehaviour
 
         currentHealth -= damage;
         // healthText.text = "Hero: " + currentHealth.ToString();
+        GameManager.Instance.currentHealth = currentHealth;
         healthBar.SetHealth(currentHealth);
 
         animator.SetTrigger("Hurt");
@@ -268,8 +279,12 @@ public class PlayerController : MonoBehaviour
         // if (collision.CompareTag("AttackSlash"))
         // {
         //     Debug.Log("Player hit by enemy");
-        //     TakeDamage(attackDamage);
         // }
+
+        if (collision.name == "Checkpoint_1")
+        {
+            GameManager.Instance.GoLevel2();
+        }
     }
 
     // Draw attack range in editor
