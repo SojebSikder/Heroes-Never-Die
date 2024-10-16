@@ -37,10 +37,8 @@ public class PlayerController : MonoBehaviour
     public int attackDamage = 20;
     // public float attackRate = 2f;
     // float nextAttackTime = 0f;
-
     public int maxHealth = 100;
     public int currentHealth;
-    public HealthBar healthBar;
 
 
     public TextMeshProUGUI healthText;
@@ -59,7 +57,6 @@ public class PlayerController : MonoBehaviour
         wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<PlayerSensor>();
 
         currentHealth = maxHealth;
-        healthBar.SetHealth(maxHealth);
         healthText.text = "Hero: " + currentHealth.ToString();
     }
 
@@ -230,9 +227,6 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-
-        healthBar.SetHealth(currentHealth);
-
         if (currentHealth <= 0)
         {
             return;
