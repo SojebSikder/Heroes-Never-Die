@@ -37,22 +37,14 @@ public class PlayerController : MonoBehaviour
     public int attackDamage = 20;
     // public float attackRate = 2f;
     // float nextAttackTime = 0f;
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-    public int maxHealth = 100;
-    public HealthBar healthBar;
-=======
+
     public int maxHealth = 100;
     public int currentHealth;
+    public HealthBar healthBar;
 
 
     public TextMeshProUGUI healthText;
 
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> main
 
 
     // Start is called before the first frame update
@@ -65,19 +57,10 @@ public class PlayerController : MonoBehaviour
         wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<PlayerSensor>();
         wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<PlayerSensor>();
         wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<PlayerSensor>();
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
 
         currentHealth = maxHealth;
         healthBar.SetHealth(maxHealth);
         healthText.text = "Hero: " + currentHealth.ToString();
->>>>>>> Stashed changes
-=======
-
-        currentHealth = maxHealth;
-        healthText.text = "Hero: " + currentHealth.ToString();
->>>>>>> main
     }
 
     // Update is called once per frame
@@ -236,11 +219,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> main
     void Respawn()
     {
         gameManager.DoSlowmotion();
@@ -252,10 +230,9 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-<<<<<<< HEAD
+
         healthBar.SetHealth(currentHealth);
-=======
->>>>>>> main
+
         if (currentHealth <= 0)
         {
             return;
@@ -297,10 +274,6 @@ public class PlayerController : MonoBehaviour
     }
 
     // Draw attack range in editor
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> main
     void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
