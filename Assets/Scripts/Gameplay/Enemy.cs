@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -9,8 +10,9 @@ public class Enemy : MonoBehaviour
 
 
     private Animator animator;
-    public int maxHealth = 100;
+    public int maxHealth = 200;
     int currentHealth;
+    public HealthBar EnemyhealthBar;
 
     // when emeny hit player, player health will be decrease by 20
     public int attackDamage = 20;
@@ -32,6 +34,7 @@ public class Enemy : MonoBehaviour
 
         currentHealth = maxHealth;
         healthText.text = "Villain: " + currentHealth.ToString();
+        EnemyhealthBar.SetMaxHealth(maxHealth);
     }
 
     public void LookAtPlayer()
@@ -61,6 +64,7 @@ public class Enemy : MonoBehaviour
         }
         currentHealth -= damage;
         healthText.text = "Villain: " + currentHealth.ToString();
+        EnemyhealthBar.SetHealth(currentHealth);
 
         if (isBoss)
         {
