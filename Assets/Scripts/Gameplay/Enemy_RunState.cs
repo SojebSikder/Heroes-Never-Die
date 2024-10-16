@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Enemy_RunState : StateMachineBehaviour
 {
+    public bool isBoss = false;
     public float speed = 2.5f;
     public float attackRange = 3f;
 
@@ -33,6 +34,18 @@ public class Enemy_RunState : StateMachineBehaviour
         {
             // attack animation for boss
             animator.SetTrigger("Attack_" + Random.Range(1, 3));
+
+            if (isBoss)
+            {
+                // play attack sound
+                FindObjectOfType<AudioManager>().Play("sword-attack-boss");
+            }
+            else
+            {
+                // play attack sound
+                FindObjectOfType<AudioManager>().Play("sword-attack-enemy");
+            }
+
         }
     }
 

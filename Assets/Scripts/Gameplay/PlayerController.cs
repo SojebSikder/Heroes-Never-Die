@@ -166,6 +166,9 @@ public class PlayerController : MonoBehaviour
             // Call on of three animations "Attack1", "Attack2", "Attack3"
             animator.SetTrigger("Attack" + currentAttack);
 
+            // play attack sound
+            FindObjectOfType<AudioManager>().Play("sword-attack-player");
+
             // Detect enemies in range of attack
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLaters);
 
@@ -179,16 +182,16 @@ public class PlayerController : MonoBehaviour
             timeSinceAttack = 0.0f;
         }
         // Block
-        else if (Input.GetMouseButtonDown(1) && !rolling)
-        {
-            animator.SetTrigger("Block");
-            animator.SetBool("IdleBlock", true);
-        }
-        else if (Input.GetMouseButtonUp(1))
-        {
-            animator.SetBool("IdleBlock", false);
+        // else if (Input.GetMouseButtonDown(1) && !rolling)
+        // {
+        //     animator.SetTrigger("Block");
+        //     animator.SetBool("IdleBlock", true);
+        // }
+        // else if (Input.GetMouseButtonUp(1))
+        // {
+        //     animator.SetBool("IdleBlock", false);
 
-        }
+        // }
         // Roll
         else if (Input.GetKeyDown("left shift") && !rolling && !isWallSliding)
         {
