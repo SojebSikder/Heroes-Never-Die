@@ -1,11 +1,9 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     public bool isBoss = false;
-    public Transform player;
+    private Transform player;
     public bool isFlipped = false;
 
 
@@ -29,12 +27,16 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 
         currentHealth = maxHealth;
 
         currentHealth = maxHealth;
         // healthText.text = "Villain: " + currentHealth.ToString();
-        EnemyhealthBar.SetMaxHealth(maxHealth);
+        if (isBoss)
+        {
+            EnemyhealthBar.SetMaxHealth(maxHealth);
+        }
     }
 
     public void LookAtPlayer()
@@ -62,21 +64,21 @@ public class Enemy : MonoBehaviour
         {
             return;
         }
-        currentHealth -= damage;
-        // healthText.text = "Villain: " + currentHealth.ToString();
-        EnemyhealthBar.SetHealth(currentHealth);
 
+        // healthText.text = "Villain: " + currentHealth.ToString();
         if (isBoss)
         {
+            currentHealth -= damage;
+            EnemyhealthBar.SetHealth(currentHealth);
             // randome between 2 hit animations for boss
             animator.SetTrigger("Hit_" + Random.Range(1, 3));
         }
         else
         {
+            currentHealth -= damage * 2;
             // for skeleton enemy
             animator.SetTrigger("Hit");
         }
-
 
         if (currentHealth <= 0)
         {
@@ -87,10 +89,10 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         animator.SetTrigger("Death");
-        // GetComponent<Collider2D>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
         enabled = false;
         // destroy the enemy after 1 second
-        // Destroy(gameObject, 10f);
+        Destroy(gameObject, 10f);
     }
 
 
