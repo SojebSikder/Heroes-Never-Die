@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: black_knight Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011539305864, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+      propertyPath: m_TagString
+      value: Enemies
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: m_LocalScale.x
       value: -0.018256567
@@ -26,11 +30,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.46
+      value: 9.552982
       objectReference: {fileID: 0}
     - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.77
+      value: -1.2432432
       objectReference: {fileID: 0}
     - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -64,6 +68,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95000010383629962, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1793060457720011053, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
@@ -72,6 +80,10 @@ PrefabInstance:
       propertyPath: EnemyhealthBar
       value: 
       objectReference: {fileID: 6309124824748209128}
+    - target: {fileID: 6825885844401675134, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6825885844401675134, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: attackRange
       value: 2.69
@@ -99,17 +111,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6309124824748209128}
   m_SourcePrefab: {fileID: 100100000, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
---- !u!114 &1114733230089531121 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1208341555818664200, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
-  m_PrefabInstance: {fileID: 2286904785907318777}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1669001380505549271 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 618624965562730030, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
@@ -157,4 +158,3 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
-  fill: {fileID: 1114733230089531121}

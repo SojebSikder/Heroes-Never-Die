@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5557603332806633473}
   m_Layer: 8
   m_Name: Skeleton
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7762303854937837598}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1232b96a9716e9a4d89e8539c9691e70, type: 3}
   m_Name: 
@@ -183,7 +183,6 @@ MonoBehaviour:
   attackMask:
     serializedVersion: 2
     m_Bits: 64
-  healthText: {fileID: 0}
 --- !u!95 &5557603332806633473
 Animator:
   serializedVersion: 5
@@ -192,7 +191,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7762303854937837598}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 82e01184285ccff429734c85bf9b3357, type: 2}
   m_CullingMode: 0
