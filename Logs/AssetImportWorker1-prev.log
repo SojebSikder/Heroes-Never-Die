@@ -315,7 +315,6 @@ Unloading 38 unused Assets / (107.0 KB). Loaded Objects now: 4817.
 Memory consumption went from 150.0 MB to 149.9 MB.
 Total: 4.697800 ms (FindLiveObjects: 0.407900 ms CreateObjectMapping: 0.261500 ms MarkObjects: 3.913200 ms  DeleteObjects: 0.114300 ms)
 
-Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 

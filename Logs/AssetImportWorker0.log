@@ -1,17 +1,17 @@
 Using pre-set license
-Built from '2022.3/staging' branch; Version is '2022.3.32f1 (c8300dc0a3fa) revision 13119501'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22631) 64bit Professional' Language: 'en' Physical Memory: 15761 MB
+Built from '2022.3/staging' branch; Version is '2022.3.47f1 (88c277b85d21) revision 8962679'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Professional' Language: 'en' Physical Memory: 16197 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-C:\Unity\2022.3.32f1\Editor\Unity.exe
+D:\ProgramData\Unity\Hub\Editor\2022.3.47f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/Chonnochara/Heroes-Never-Die
+D:/All Programs/Project/unity/Heroes-Never-Die
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
@@ -56,16 +56,16 @@ Player connection [10540] Host "[IP] 192.168.0.102 [Port] 0 [Flags] 2 [Guid] 868
 [PhysX] Initialized MultithreadedTaskDispatcher with 4 workers.
 Refreshing native plugins compatible for Editor in 11.76 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2022.3.32f1 (c8300dc0a3fa)
-[Subsystems] Discovering subsystems at path C:/Unity/2022.3.32f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Chonnochara/Heroes-Never-Die/Assets
+Initialize engine version: 2022.3.47f1 (88c277b85d21)
+[Subsystems] Discovering subsystems at path D:/ProgramData/Unity/Hub/Editor/2022.3.47f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/All Programs/Project/unity/Heroes-Never-Die/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: AMD Radeon(TM) Graphics (ID=0x1638)
-    Vendor:   ATI
-    VRAM:     7880 MB
-    Driver:   31.0.21921.1000
+    Renderer: Intel(R) UHD Graphics 630 (ID=0x9bc8)
+    Vendor:   Intel
+    VRAM:     8098 MB
+    Driver:   31.0.101.2111
 Initialize mono
 Mono path[0] = 'C:/Unity/2022.3.32f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Unity/2022.3.32f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
@@ -82,9 +82,6 @@ Registered in 0.035386 seconds.
 - Loaded All Assemblies, in  0.454 seconds
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-[usbmuxd] Start listen thread
-[usbmuxd] Listen thread started
-Native extension for iOS target not found
 Native extension for Android target not found
 Android Extension - Scanning For ADB Devices 336 ms
 Native extension for WebGL target not found
@@ -125,12 +122,12 @@ Domain Reload Profiling: 1106ms
 		AwakeInstancesAfterBackupRestoration (0ms)
 ========================================================================
 Worker process is ready to serve import requests
+Caller must complete domain reload
 Begin MonoManager ReloadAssembly
 - Loaded All Assemblies, in  0.744 seconds
 Refreshing native plugins compatible for Editor in 4.81 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
@@ -182,6 +179,7 @@ Total: 4.122200 ms (FindLiveObjects: 0.259100 ms CreateObjectMapping: 0.208900 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
@@ -319,12 +317,12 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Prepare
+Caller must complete domain reload
 Begin MonoManager ReloadAssembly
 - Loaded All Assemblies, in  0.710 seconds
 Refreshing native plugins compatible for Editor in 6.03 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
@@ -375,6 +373,7 @@ Total: 8.675200 ms (FindLiveObjects: 2.357100 ms CreateObjectMapping: 1.034000 m
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
@@ -388,12 +387,12 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Prepare
+Caller must complete domain reload
 Begin MonoManager ReloadAssembly
 - Loaded All Assemblies, in  0.986 seconds
 Refreshing native plugins compatible for Editor in 91.00 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
@@ -444,6 +443,7 @@ Total: 5.123800 ms (FindLiveObjects: 0.552800 ms CreateObjectMapping: 0.379500 m
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
@@ -475,12 +475,12 @@ Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Prepare
+Caller must complete domain reload
 Begin MonoManager ReloadAssembly
 - Loaded All Assemblies, in  0.937 seconds
 Refreshing native plugins compatible for Editor in 4.80 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
@@ -509,7 +509,7 @@ Domain Reload Profiling: 2183ms
 	FinalizeReload (1261ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (531ms)
+		SetupLoadedEditorAssemblies (523ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (48ms)
 			SetLoadedEditorAssemblies (3ms)
@@ -531,9 +531,11 @@ Total: 3.720200 ms (FindLiveObjects: 0.371100 ms CreateObjectMapping: 0.220700 m
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:scripting/monoscript/fileName/HealthBar.cs: 671774bd9f5df513e52f8c10d14b90d5 -> e02a13ebfecfefd70171c0594cf22391
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -541,7 +543,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/BossHealthBar.cs: 9a4ad7d87210f078274a57b27705a6ff -> f56091b062fa9b5db4f8118ef4231f37
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: db96ae5e9bea438640e1f3e37721ea6a -> a7b0953d886568a8bed2b62cd951ff89
 ========================================================================
 Received Import Request.
   Time since last request: 291.525068 seconds.
@@ -553,12 +557,12 @@ Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Prepare
+Caller must complete domain reload
 Begin MonoManager ReloadAssembly
 - Loaded All Assemblies, in  1.184 seconds
 Refreshing native plugins compatible for Editor in 16.08 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
@@ -609,9 +613,11 @@ Total: 4.216100 ms (FindLiveObjects: 0.261900 ms CreateObjectMapping: 0.221400 m
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:scripting/monoscript/fileName/HealthBar.cs: 671774bd9f5df513e52f8c10d14b90d5 -> e02a13ebfecfefd70171c0594cf22391
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -619,15 +625,17 @@ AssetImportParameters requested are different than current active one (requested
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/BossHealthBar.cs: 9a4ad7d87210f078274a57b27705a6ff -> f56091b062fa9b5db4f8118ef4231f37
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: db96ae5e9bea438640e1f3e37721ea6a -> a7b0953d886568a8bed2b62cd951ff89
 ========================================================================
 Received Prepare
+Caller must complete domain reload
 Begin MonoManager ReloadAssembly
 - Loaded All Assemblies, in  0.921 seconds
 Refreshing native plugins compatible for Editor in 8.34 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
@@ -678,9 +686,11 @@ Total: 4.826000 ms (FindLiveObjects: 0.593700 ms CreateObjectMapping: 0.156900 m
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:scripting/monoscript/fileName/HealthBar.cs: 671774bd9f5df513e52f8c10d14b90d5 -> e02a13ebfecfefd70171c0594cf22391
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -688,15 +698,17 @@ AssetImportParameters requested are different than current active one (requested
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/BossHealthBar.cs: 9a4ad7d87210f078274a57b27705a6ff -> f56091b062fa9b5db4f8118ef4231f37
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: db96ae5e9bea438640e1f3e37721ea6a -> a7b0953d886568a8bed2b62cd951ff89
 ========================================================================
 Received Prepare
+Caller must complete domain reload
 Begin MonoManager ReloadAssembly
 - Loaded All Assemblies, in  0.763 seconds
 Refreshing native plugins compatible for Editor in 10.03 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
@@ -747,9 +759,11 @@ Total: 4.419400 ms (FindLiveObjects: 0.618700 ms CreateObjectMapping: 0.153600 m
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:scripting/monoscript/fileName/HealthBar.cs: 671774bd9f5df513e52f8c10d14b90d5 -> e02a13ebfecfefd70171c0594cf22391
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -757,15 +771,17 @@ AssetImportParameters requested are different than current active one (requested
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/BossHealthBar.cs: 9a4ad7d87210f078274a57b27705a6ff -> f56091b062fa9b5db4f8118ef4231f37
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: db96ae5e9bea438640e1f3e37721ea6a -> a7b0953d886568a8bed2b62cd951ff89
 ========================================================================
 Received Prepare
+Caller must complete domain reload
 Begin MonoManager ReloadAssembly
 - Loaded All Assemblies, in  0.748 seconds
 Refreshing native plugins compatible for Editor in 5.48 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
@@ -816,9 +832,11 @@ Total: 4.281400 ms (FindLiveObjects: 0.319000 ms CreateObjectMapping: 0.210300 m
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:scripting/monoscript/fileName/HealthBar.cs: 671774bd9f5df513e52f8c10d14b90d5 -> e02a13ebfecfefd70171c0594cf22391
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -826,15 +844,17 @@ AssetImportParameters requested are different than current active one (requested
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/BossHealthBar.cs: 9a4ad7d87210f078274a57b27705a6ff -> f56091b062fa9b5db4f8118ef4231f37
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: db96ae5e9bea438640e1f3e37721ea6a -> a7b0953d886568a8bed2b62cd951ff89
 ========================================================================
 Received Prepare
+Caller must complete domain reload
 Begin MonoManager ReloadAssembly
 - Loaded All Assemblies, in  0.706 seconds
 Refreshing native plugins compatible for Editor in 5.82 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
@@ -855,8 +875,8 @@ Domain Reload Profiling: 2878ms
 	LoadAllAssembliesAndSetupDomain (359ms)
 		LoadAssemblies (489ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (16ms)
-			TypeCache.Refresh (6ms)
+		AnalyzeDomain (15ms)
+			TypeCache.Refresh (7ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (9ms)
@@ -885,9 +905,11 @@ Total: 6.235800 ms (FindLiveObjects: 0.743300 ms CreateObjectMapping: 0.183300 m
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:scripting/monoscript/fileName/HealthBar.cs: 671774bd9f5df513e52f8c10d14b90d5 -> e02a13ebfecfefd70171c0594cf22391
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -895,15 +917,16 @@ AssetImportParameters requested are different than current active one (requested
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/BossHealthBar.cs: 9a4ad7d87210f078274a57b27705a6ff -> f56091b062fa9b5db4f8118ef4231f37
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Prepare
+Caller must complete domain reload
 Begin MonoManager ReloadAssembly
 - Loaded All Assemblies, in  0.697 seconds
 Refreshing native plugins compatible for Editor in 7.45 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
@@ -1023,9 +1046,11 @@ Total: 4.906800 ms (FindLiveObjects: 0.449700 ms CreateObjectMapping: 0.156400 m
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:scripting/monoscript/fileName/HealthBar.cs: 671774bd9f5df513e52f8c10d14b90d5 -> e02a13ebfecfefd70171c0594cf22391
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -1033,6 +1058,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/BossHealthBar.cs: 9a4ad7d87210f078274a57b27705a6ff -> f56091b062fa9b5db4f8118ef4231f37
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Prepare
@@ -1105,12 +1131,12 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Prepare
+Caller must complete domain reload
 Begin MonoManager ReloadAssembly
 - Loaded All Assemblies, in  0.709 seconds
 Refreshing native plugins compatible for Editor in 5.70 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
@@ -1121,7 +1147,7 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling: 2802ms
 	BeginReloadAssembly (230ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (10ms)
+		DisableScriptedObjects (15ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (43ms)
@@ -1299,9 +1325,11 @@ Total: 6.950000 ms (FindLiveObjects: 0.656100 ms CreateObjectMapping: 0.304800 m
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:scripting/monoscript/fileName/HealthBar.cs: 671774bd9f5df513e52f8c10d14b90d5 -> e02a13ebfecfefd70171c0594cf22391
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -1309,15 +1337,17 @@ AssetImportParameters requested are different than current active one (requested
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/BossHealthBar.cs: 9a4ad7d87210f078274a57b27705a6ff -> f56091b062fa9b5db4f8118ef4231f37
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: db96ae5e9bea438640e1f3e37721ea6a -> a7b0953d886568a8bed2b62cd951ff89
 ========================================================================
 Received Prepare
+Caller must complete domain reload
 Begin MonoManager ReloadAssembly
 - Loaded All Assemblies, in  0.669 seconds
 Refreshing native plugins compatible for Editor in 5.75 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
@@ -1368,9 +1398,11 @@ Total: 5.609900 ms (FindLiveObjects: 0.633100 ms CreateObjectMapping: 0.369800 m
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:scripting/monoscript/fileName/HealthBar.cs: 671774bd9f5df513e52f8c10d14b90d5 -> e02a13ebfecfefd70171c0594cf22391
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -1378,15 +1410,17 @@ AssetImportParameters requested are different than current active one (requested
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/BossHealthBar.cs: 9a4ad7d87210f078274a57b27705a6ff -> f56091b062fa9b5db4f8118ef4231f37
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: db96ae5e9bea438640e1f3e37721ea6a -> a7b0953d886568a8bed2b62cd951ff89
 ========================================================================
 Received Prepare
+Caller must complete domain reload
 Begin MonoManager ReloadAssembly
 - Loaded All Assemblies, in  0.694 seconds
 Refreshing native plugins compatible for Editor in 6.27 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
@@ -1397,7 +1431,7 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling: 2847ms
 	BeginReloadAssembly (227ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
+		DisableScriptedObjects (16ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (42ms)
@@ -1437,9 +1471,11 @@ Total: 4.531100 ms (FindLiveObjects: 0.471800 ms CreateObjectMapping: 0.305200 m
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:scripting/monoscript/fileName/HealthBar.cs: 671774bd9f5df513e52f8c10d14b90d5 -> e02a13ebfecfefd70171c0594cf22391
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -1447,4 +1483,6 @@ AssetImportParameters requested are different than current active one (requested
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/BossHealthBar.cs: 9a4ad7d87210f078274a57b27705a6ff -> f56091b062fa9b5db4f8118ef4231f37
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: db96ae5e9bea438640e1f3e37721ea6a -> a7b0953d886568a8bed2b62cd951ff89

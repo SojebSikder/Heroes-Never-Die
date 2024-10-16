@@ -13,12 +13,24 @@ PrefabInstance:
       value: black_knight Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.018256567
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.018256567
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.018256567
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.956
+      value: 2.46
       objectReference: {fileID: 0}
     - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.73
+      value: -2.77
       objectReference: {fileID: 0}
     - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -52,8 +64,97 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1793060457720011053, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613136780198525972, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+      propertyPath: EnemyhealthBar
+      value: 
+      objectReference: {fileID: 6309124824748209128}
+    - target: {fileID: 6825885844401675134, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+      propertyPath: attackRange
+      value: 2.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825885844401675134, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+      propertyPath: EnemyhealthBar
+      value: 
+      objectReference: {fileID: 6309124824748209128}
+    - target: {fileID: 6825885844401675134, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+      propertyPath: attackOffset.x
+      value: -2.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825885844401675134, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+      propertyPath: attackOffset.y
+      value: 2.06
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4331773161927770361, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+    - {fileID: 2613136780198525972, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+    - {fileID: 6680895059787821356, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 618624965562730030, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6309124824748209128}
   m_SourcePrefab: {fileID: 100100000, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+--- !u!114 &1114733230089531121 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1208341555818664200, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+  m_PrefabInstance: {fileID: 2286904785907318777}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1669001380505549271 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 618624965562730030, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+  m_PrefabInstance: {fileID: 2286904785907318777}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6309124824748209128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669001380505549271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d592eff887b1974e87935bf53f58fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0, b: 0, a: 1}
+    key1: {r: 0.94800144, g: 0.990566, b: 0.042052314, a: 1}
+    key2: {r: 0, g: 1, b: 0.052682877, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 19661
+    ctime1: 39321
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 1
+    m_ColorSpace: -1
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  fill: {fileID: 1114733230089531121}
