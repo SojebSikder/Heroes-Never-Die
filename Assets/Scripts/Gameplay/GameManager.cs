@@ -25,16 +25,48 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+
     void Update()
     {
         Time.timeScale += (1f / slowdownLength) * Time.unscaledDeltaTime;
         Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
+
+        // check if all objects is visible
+        GameObject[] targets = GameObject.FindGameObjectsWithTag("Enemies");
+
+        Camera camera = Camera.main;
+        foreach (GameObject target in targets)
+        {
+            if (IsVisible(camera, target))
+            {
+                target.GetComponent<Enemy>().enabled = true;
+                target.GetComponent<Animator>().enabled = true;
+            }
+        }
+
+
     }
 
     public void DoSlowmotion()
     {
         Time.timeScale = slowdonwnFactor;
         Time.fixedDeltaTime = Time.timeScale * 0.02f;
+    }
+
+
+    private bool IsVisible(Camera camera, GameObject target)
+    {
+        Plane[] planes = GeometryUtility.CalculateFrustumPlanes(camera);
+        var point = target.transform.position;
+
+        foreach (var plane in planes)
+        {
+            if (plane.GetDistanceToPoint(point) < 0)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     public void SaveGame()
