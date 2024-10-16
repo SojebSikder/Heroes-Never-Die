@@ -40,10 +40,10 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
-    public HealthBar healthBar ;
+    public HealthBar healthBar;
 
 
-    public TextMeshProUGUI healthText;
+    // public TextMeshProUGUI healthText;
 
 
 
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<PlayerSensor>();
 
         currentHealth = maxHealth;
-        healthText.text = "Hero: " + currentHealth.ToString();
+        // healthText.text = "Hero: " + currentHealth.ToString();
         healthBar.SetMaxHealth(maxHealth);
     }
 
@@ -224,7 +224,8 @@ public class PlayerController : MonoBehaviour
         gameManager.DoSlowmotion();
 
         currentHealth = maxHealth;
-        healthText.text = "Hero: " + currentHealth.ToString();
+        // healthText.text = "Hero: " + currentHealth.ToString();
+        healthBar.SetHealth(currentHealth);
         animator.SetTrigger("Respawn");
     }
 
@@ -236,7 +237,7 @@ public class PlayerController : MonoBehaviour
         }
 
         currentHealth -= damage;
-        healthText.text = "Hero: " + currentHealth.ToString();
+        // healthText.text = "Hero: " + currentHealth.ToString();
         healthBar.SetHealth(currentHealth);
 
         animator.SetTrigger("Hurt");
