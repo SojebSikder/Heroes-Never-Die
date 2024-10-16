@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
+    public HealthBar healthBar ;
+
 
     public TextMeshProUGUI healthText;
 
@@ -58,6 +60,7 @@ public class PlayerController : MonoBehaviour
 
         currentHealth = maxHealth;
         healthText.text = "Hero: " + currentHealth.ToString();
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -234,6 +237,7 @@ public class PlayerController : MonoBehaviour
 
         currentHealth -= damage;
         healthText.text = "Hero: " + currentHealth.ToString();
+        healthBar.SetHealth(currentHealth);
 
         animator.SetTrigger("Hurt");
 
