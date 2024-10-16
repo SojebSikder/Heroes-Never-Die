@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
     public LayerMask attackMask;
 
 
-    public TextMeshProUGUI healthText;
+    // public TextMeshProUGUI healthText;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
         currentHealth = maxHealth;
 
         currentHealth = maxHealth;
-        healthText.text = "Villain: " + currentHealth.ToString();
+        // healthText.text = "Villain: " + currentHealth.ToString();
         EnemyhealthBar.SetMaxHealth(maxHealth);
     }
 
@@ -63,7 +63,7 @@ public class Enemy : MonoBehaviour
             return;
         }
         currentHealth -= damage;
-        healthText.text = "Villain: " + currentHealth.ToString();
+        // healthText.text = "Villain: " + currentHealth.ToString();
         EnemyhealthBar.SetHealth(currentHealth);
 
         if (isBoss)

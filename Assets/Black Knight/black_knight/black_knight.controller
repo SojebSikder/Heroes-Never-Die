@@ -27,7 +27,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
-  attackRange: 3
+  attackRange: 6
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -1055,7 +1055,7 @@ AnimatorStateMachine:
     m_Position: {x: 300, y: 230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102000012236513250}
-    m_Position: {x: 396, y: 468, z: 0}
+    m_Position: {x: 390, y: 470, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102000011235867382}
     m_Position: {x: 624, y: 300, z: 0}
