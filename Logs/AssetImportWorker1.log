@@ -343,3 +343,8 @@ Start importing Assets/Prefabs/Player.prefab using Guid(3e5570915dbdf7d43ba2546a
  -> (artifact id: '1871b93c231ce8c23f932132dd97df83') in 0.000627 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.561 seconds

@@ -433,3 +433,8 @@ Start importing Assets/Scripts/Gameplay/GameManager.cs using Guid(72399d5198ea6d
  -> (artifact id: '6e507c1fe3e56d82683dceca1408ec29') in 0.000461 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.571 seconds
