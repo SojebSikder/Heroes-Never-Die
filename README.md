@@ -32,6 +32,8 @@ Team: UU_Chonnochara
 
 ## Story:
 
+**Rescue of the Realm**
+
 <b>"The fate of the kingdom, the life of Princess Humayra, and the future of the world rest on Sojeb’s courage and the magic of Joynix.
 "</b>
 
