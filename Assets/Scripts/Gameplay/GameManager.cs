@@ -86,5 +86,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Scene2");
     }
 
+    public void GoMainMenu()
+    {
+        SceneManager.LoadScene("GameoverMenu");
+    }
+
 
 }
