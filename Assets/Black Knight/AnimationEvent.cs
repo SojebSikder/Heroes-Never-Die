@@ -9,7 +9,7 @@ public class AnimationEvent : MonoBehaviour
 	public GameObject enemy;
 	public int attackDamage = 20;
 
-	private int atkTimes = 0;
+	// private int atkTimes = 0;
 
 	public void AttackStart()
 	{

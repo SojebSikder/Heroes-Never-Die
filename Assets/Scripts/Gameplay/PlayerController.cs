@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
     private int facingDirection = 1;
     private float currentAttack;
     private float timeSinceAttack = 0.0f;
+    public float cooldown = 1f;
+    private float lastAttackedAt = -9999f;
     private float delayToIdle = 0.0f;
     private float rollDuration = 0.0f;
     private float rollCurrentTime;
@@ -35,8 +37,6 @@ public class PlayerController : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLaters;
     public int attackDamage = 20;
-    // public float attackRate = 2f;
-    // float nextAttackTime = 0f;
     public int maxHealth = 100;
     public int currentHealth;
 
@@ -149,37 +149,12 @@ public class PlayerController : MonoBehaviour
         // Attack
         else if (Input.GetMouseButtonDown(0) && timeSinceAttack > 0.25f && !rolling)
         {
-            currentAttack++;
-
-            // Loop back to one after third attack
-            if (currentAttack > 3)
+            if (Time.time > lastAttackedAt + cooldown)
             {
-                currentAttack = 1;
+                Attack();
             }
 
-            // Reset attack combo if time since last attack is too large
-            if (timeSinceAttack > 1.0f)
-            {
-                currentAttack = 1;
-            }
 
-            // Call on of three animations "Attack1", "Attack2", "Attack3"
-            animator.SetTrigger("Attack" + currentAttack);
-
-            // play attack sound
-            FindObjectOfType<AudioManager>().Play("sword-attack-player");
-
-            // Detect enemies in range of attack
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLaters);
-
-            // Damage enemies
-            foreach (Collider2D enemy in hitEnemies)
-            {
-                enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-            }
-
-            // Reset timer
-            timeSinceAttack = 0.0f;
         }
         // Block
         // else if (Input.GetMouseButtonDown(1) && !rolling)
@@ -240,6 +215,44 @@ public class PlayerController : MonoBehaviour
         GameManager.Instance.currentHealth = currentHealth;
         healthBar.SetHealth(currentHealth);
         animator.SetTrigger("Respawn");
+    }
+
+    public void Attack()
+    {
+        currentAttack++;
+
+        // Loop back to one after third attack
+        if (currentAttack > 3)
+        {
+            currentAttack = 1;
+        }
+
+        // Reset attack combo if time since last attack is too large
+        if (timeSinceAttack > 1.0f)
+        {
+            currentAttack = 1;
+        }
+
+        // Call on of three animations "Attack1", "Attack2", "Attack3"
+        animator.SetTrigger("Attack" + currentAttack);
+
+        // play attack sound
+        FindObjectOfType<AudioManager>().Play("sword-attack-player");
+
+        // Detect enemies in range of attack
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLaters);
+
+        // Damage enemies
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+        }
+
+        // Reset timer
+        timeSinceAttack = 0.0f;
+
+        // Update last attack time
+        lastAttackedAt = Time.time;
     }
 
     public void TakeDamage(int damage)
