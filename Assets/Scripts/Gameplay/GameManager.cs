@@ -28,9 +28,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        Time.timeScale += (1f / slowdownLength) * Time.unscaledDeltaTime;
-        Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
 
+        if (!PauseMenu.GameIsPaused)
+        {
+            Time.timeScale += (1f / slowdownLength) * Time.unscaledDeltaTime;
+            Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
+        }
         // check if all objects is visible
         GameObject[] targets = GameObject.FindGameObjectsWithTag("Enemies");
 
