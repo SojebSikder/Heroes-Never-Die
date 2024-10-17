@@ -293,7 +293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2967302985007432684, guid: ac5eabc885aa24d4a8b127a35623e416, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 80.57
+      value: 78.28
       objectReference: {fileID: 0}
     - target: {fileID: 2967302985007432684, guid: ac5eabc885aa24d4a8b127a35623e416, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8339,7 +8339,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3754156527972886798, guid: 6cd93b50564470b43ac2f9a5d8870f99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 72.75
+      value: 74.97
       objectReference: {fileID: 0}
     - target: {fileID: 3754156527972886798, guid: 6cd93b50564470b43ac2f9a5d8870f99, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8383,7 +8383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8337797589422484695, guid: 6cd93b50564470b43ac2f9a5d8870f99, type: 3}
       propertyPath: checkpointRange
-      value: 6.28
+      value: 4.53
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
