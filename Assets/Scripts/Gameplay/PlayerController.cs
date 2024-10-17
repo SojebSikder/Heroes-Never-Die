@@ -288,6 +288,12 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.Instance.GoLevel2();
         }
+
+        if (collision.name == "Checkpoint_2")
+        {
+            // GameManager.Instance.GoLevel3();
+            GameManager.Instance.GoMainMenu();
+        }
     }
 
     // Draw attack range in editor

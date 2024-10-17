@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1988760440413451419, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+      propertyPath: m_Mass
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2613136780198525972, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: EnemyhealthBar
       value: 
