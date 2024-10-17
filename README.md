@@ -22,11 +22,11 @@ To Attack use "MouseRightButton"
 
 ## Credits:
 
-Story & Game Play Programmer - Sojeb Sikder
+Story & Gameplay Programmer - [Sojeb Sikder](https://github.com/SojebSikder)
 
-Story Concept - Faysal Ahammad Joy
+Story Concept - [Faysal Ahammad Joy](https://github.com/fajoy786)
 
-Level Designer - Nayeem Hossen Jim
+Level Designer - [Nayeem Hossen Jim](https://github.com/NayeemHossenJim)
 
 Team: UU_Chonnochara
 
