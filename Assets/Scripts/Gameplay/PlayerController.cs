@@ -295,16 +295,16 @@ public class PlayerController : MonoBehaviour
         //     Debug.Log("Player hit by enemy");
         // }
 
-        if (collision.name == "Checkpoint_1")
-        {
-            GameManager.Instance.GoLevel2();
-        }
+        // if (collision.name == "Checkpoint_1")
+        // {
+        //     GameManager.Instance.GoLevel2();
+        // }
 
-        if (collision.name == "Checkpoint_2")
-        {
-            // GameManager.Instance.GoLevel3();
-            GameManager.Instance.GoMainMenu();
-        }
+        // if (collision.name == "Checkpoint_2")
+        // {
+        //     // GameManager.Instance.GoLevel3();
+        //     GameManager.Instance.GoMainMenu();
+        // }
     }
 
     // Draw attack range in editor
