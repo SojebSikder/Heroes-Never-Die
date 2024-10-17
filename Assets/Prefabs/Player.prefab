@@ -707,6 +707,7 @@ MonoBehaviour:
   rollForce: 6
   noBlood: 0
   slideDust: {fileID: 1675078596160920227, guid: 9cfef12ff30e5804abf00b41b0e91f09, type: 3}
+  cooldown: 1.1
   attackPoint: {fileID: 4606974226299033421}
   attackRange: 1.7
   enemyLaters:

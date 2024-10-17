@@ -153,8 +153,6 @@ public class PlayerController : MonoBehaviour
             {
                 Attack();
             }
-
-
         }
         // Block
         // else if (Input.GetMouseButtonDown(1) && !rolling)
@@ -228,10 +226,10 @@ public class PlayerController : MonoBehaviour
         }
 
         // Reset attack combo if time since last attack is too large
-        if (timeSinceAttack > 1.0f)
-        {
-            currentAttack = 1;
-        }
+        // if (timeSinceAttack > 1.0f)
+        // {
+        //     currentAttack = 1;
+        // }
 
         // Call on of three animations "Attack1", "Attack2", "Attack3"
         animator.SetTrigger("Attack" + currentAttack);
