@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
@@ -33,8 +31,13 @@ public class Checkpoint : MonoBehaviour
 
             if (checkpointName == "Checkpoint_2")
             {
-                GameObject.Find("SojebHumayra_Conversation").GetComponent<DialogueTrigger>().TriggerDialogue();
-                // GameManager.Instance.GoMainMenu();
+                Destroy(gameObject);
+                // stop the player from moving
+                GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
+                GameObject.Find("Player").GetComponent<Animator>().enabled = false;
+
+                // start the conversation
+                GameObject.Find("SojebHumayra_Conversation").GetComponent<DialogueTrigger>().TriggerDialogue(true);
             }
             // colInfo.GetComponent<PlayerController>().TakeDamage(checkpointDamage);
         }

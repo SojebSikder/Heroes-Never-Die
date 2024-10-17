@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
+    private bool gameOver = false;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
@@ -20,9 +22,10 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<KeyValuePair<string, string>>();
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue, bool gameOver = false)
     {
         animator.SetBool("IsOpen", true);
+        this.gameOver = gameOver;
 
         // nameText.text = dialogue.name;
 
@@ -40,7 +43,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (sentences.Count == 0)
         {
-            EndDialogue();
+            EndDialogue(gameOver);
             return;
         }
 
@@ -61,8 +64,14 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void EndDialogue()
+    void EndDialogue(bool gameOver = false)
     {
         animator.SetBool("IsOpen", false);
+
+        if (gameOver)
+        {
+            // GameManager.Instance.GoMainMenu();
+            SceneManager.LoadScene("GameoverMenu");
+        }
     }
 }

@@ -9,8 +9,8 @@ public class DialogueTrigger : MonoBehaviour
     //     TriggerDialogue();
     // }
 
-    public void TriggerDialogue()
+    public void TriggerDialogue(bool gameOver = false)
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue, gameOver);
     }
 }
