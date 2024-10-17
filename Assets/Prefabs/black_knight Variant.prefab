@@ -18,23 +18,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: m_LocalScale.x
-      value: -0.018256567
+      value: -0.015730176
       objectReference: {fileID: 0}
     - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.018256567
+      value: 0.015730176
       objectReference: {fileID: 0}
     - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.018256567
+      value: 0.015730176
       objectReference: {fileID: 0}
     - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.552982
+      value: 36.49
       objectReference: {fileID: 0}
     - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2432432
+      value: -1.78
       objectReference: {fileID: 0}
     - target: {fileID: 4000012697796476, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1988760440413451419, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: m_Mass
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2613136780198525972, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: EnemyhealthBar
@@ -89,8 +89,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6825885844401675134, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825885844401675134, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: attackRange
       value: 2.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825885844401675134, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
+      propertyPath: attackDamage
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6825885844401675134, guid: ddb8dec8e9dcf304fa398c7cc1bcd40a, type: 3}
       propertyPath: EnemyhealthBar

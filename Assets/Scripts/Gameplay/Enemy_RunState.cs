@@ -30,7 +30,7 @@ public class Enemy_RunState : StateMachineBehaviour
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
 
-        if (Vector2.Distance(player.position, rb.position) <= attackRange)
+        if (Vector2.Distance(player.position, rb.position) <= attackRange + 1f)
         {
             // attack animation for boss
             animator.SetTrigger("Attack_" + Random.Range(1, 3));

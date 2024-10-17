@@ -12,6 +12,8 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
 
+    public GameObject dialogueBox;
+
     // private Queue<string> sentences;
     private Queue<KeyValuePair<string, string>> sentences;
 
@@ -24,6 +26,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue, bool gameOver = false)
     {
+        // set active true
+        dialogueBox.SetActive(true);
         animator.SetBool("IsOpen", true);
         this.gameOver = gameOver;
 
@@ -67,6 +71,8 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue(bool gameOver = false)
     {
         animator.SetBool("IsOpen", false);
+        GameObject.Find("DialogueBox").gameObject.SetActive(false);
+
 
         if (gameOver)
         {
